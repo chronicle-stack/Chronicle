@@ -44,7 +44,7 @@ namespace Chronicle.Managers
         private static ISagaState CreateSagaState(SagaId id, Type sagaType, Type dataType)
         {
             var sagaData = dataType != null ? Activator.CreateInstance(dataType) : null;
-            return SagaState.Create(id, sagaType, SagaStates.Pending, sagaData);
+            return SagaState.Create(id, sagaType, SagaStates.Pending, 0, sagaData);
         }
 
         private void InitializeSaga(ISaga saga, SagaId id, ISagaState state)
