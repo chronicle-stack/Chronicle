@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Chronicle.Integrations.Redis</Title>
     <AssemblyName>Chronicle.Integrations.Redis</AssemblyName>
     <PackageId>Chronicle_.Integrations.Redis</PackageId>
@@ -19,8 +19,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="3.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Chronicle_" Version="3.*" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Chronicle\Chronicle.csproj" />
   </ItemGroup>
 
 </Project>

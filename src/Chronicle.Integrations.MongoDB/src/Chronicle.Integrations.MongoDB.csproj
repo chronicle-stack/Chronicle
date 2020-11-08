@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Title>Chronicle.Integrations.MongoDB</Title>
     <AssemblyName>Chronicle.Integrations.MongoDB</AssemblyName>
     <PackageId>Chronicle_.Integrations.MongoDB</PackageId>
@@ -18,9 +18,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Chronicle_" Version="3.*" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.9.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Chronicle\Chronicle.csproj" />
   </ItemGroup>
 
 </Project>
